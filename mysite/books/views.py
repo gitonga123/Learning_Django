@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from books.models import Book
+from mysite.forms 
 
 # Create your views here.
 
@@ -22,6 +23,5 @@ def search(request):
             return render(request,'search_results.html',{'books': books,'query': search_box})
     else:
         return render(request,'search_form.html', {'error': error})
-
 
 
