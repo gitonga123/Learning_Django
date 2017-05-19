@@ -1,0 +1,15 @@
+{% load staticfiles %}
+<html>
+<head>
+	<title>Learning Django</title>
+	<link rel="stylesheet" type="text/css" media='screen' href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+	
+</head>
+<body>
+	{% block content %}
+		<h1 class="text-info">Hello Django !</h1>
+	{% endblock}
+
+	<script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js'%}"></script>
+</body>
+</html>
