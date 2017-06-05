@@ -1,0 +1,10 @@
+<title>{{ title }}</title>
+<!-- <h2>{{headline}}</h2> -->
+<h3>Leave a Message</h3>
+
+<form method="POST" action="">
+	{%csrf_token%}
+	{{ form.as_p}}
+
+	<input type="submit" value="Submit">
+</form>

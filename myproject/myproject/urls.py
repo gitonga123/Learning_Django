@@ -18,6 +18,7 @@ from newsletter import views
 
 urlpatterns = [
     url(r'^home/', views.home, name='home'),
+    url(r'^contact/', views.contact, name='contact'),
     url(r'^admin/', include(admin.site.urls)),
 
 ]
