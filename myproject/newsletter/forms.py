@@ -9,8 +9,6 @@ class SignUpForm(forms.ModelForm):
 	def clean_email(self):
 		email =  self.cleaned_data.get('email')
 		email_base, provider = email.split('@');
-		
-		hold = 'mutwiridanielsci@uonbi.ac.ke'
 		if not 'students' in provider:
 			raise forms.ValidationError("Please use a valid University of Naiobi E-mail Address")
 		return email
