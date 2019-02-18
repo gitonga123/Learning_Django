@@ -21,7 +21,7 @@ class HomeTests(TestCase):
 
     def test_home_view_contains_link_to_topics_page(self):
         board_topics_url = reverse(
-            'boards_topics', kwargs={'pk': self.board.pk})
+            'board_topics', kwargs={'pk': self.board.pk})
         self.assertContains(
             self.response, 'href="{0}"'.format(board_topics_url))
 
@@ -31,12 +31,12 @@ class BoardTopicsTests(TestCase):
         Board.objects.create(name='Django', description='Django Board.')
 
     def test_board_topics_view_success_status_code(self):
-        url = reverse('boards_topics', kwargs={'pk': 1})
+        url = reverse('board_topics', kwargs={'pk': 1})
         response = self.client.get(url)
         self.assertEquals(response.status_code, 200)
 
     def test_board_topics_view_not_found_status_code(self):
-        url = reverse('boards_topics', kwargs={'pk': 99})
+        url = reverse('board_topics', kwargs={'pk': 99})
         response = self.client.get(url)
         self.assertEquals(response.status_code, 404)
 
