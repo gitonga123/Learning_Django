@@ -1,6 +1,0 @@
-#-r base.txt
-Pillow
-MySQL-python
-
-django-debug-toolbar
-selenium
