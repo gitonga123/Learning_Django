@@ -16,3 +16,7 @@ for i in range(5):
 
 for i in range(5):
 	print("Sum is %d required %10.7f seconds" %sumOfN2(111555550))
+
+
+for i in range(5):
+	print("Sum is %d required %10.7f seconds" %sumOfN2(111559995550))
