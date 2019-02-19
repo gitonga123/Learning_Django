@@ -25,7 +25,7 @@ class Post(models.Model):
     topic = models.ForeignKey(Topic, related_name='posts')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(null=True)
-    created_at = models.ForeignKey(User, related_name='posts')
+    created_by = models.ForeignKey(User, related_name='posts')
     updated_at = models.ForeignKey(User, null=True, related_name='+')
 
     def __str__(self):
